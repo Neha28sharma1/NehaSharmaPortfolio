@@ -362,7 +362,7 @@ span.close {
     grid-template-columns: 1fr 1fr;
   }
   #my-name {
-    font-size: 8em;
+    font-size: 7em;
   }
   #changing-text {
     font-size: 3rem;
@@ -523,12 +523,12 @@ span.text_color {
   .contact-heading,
   .lang-head,
   .skills-head {
-    font-size: 5em;
+    font-size: 3rem;
     margin-top: 0.5em;
     color: #20f7f0;
   }
   .about-me-heading {
-    font-size: 8rem;
+    font-size: 5rem;
   }
   .my-image {
     height: auto;
