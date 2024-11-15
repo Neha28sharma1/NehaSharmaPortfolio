@@ -497,7 +497,7 @@ span.text_color {
 }
 
 .about-me-text p,
-strong {
+.about-me-text strong {
   /* margin-top: 5%; */
   color: #f5ffcf;
   font-size: 1rem;
