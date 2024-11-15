@@ -496,8 +496,9 @@ span.text_color {
   border-radius: 30%;
 }
 
-.about-me-text {
-  margin-top: 5%;
+.about-me-text p,
+strong {
+  /* margin-top: 5%; */
   color: #f5ffcf;
   font-size: 1rem;
   line-height: 1.5rem;
@@ -571,4 +572,9 @@ span.text_color {
   margin-right: auto;
   justify-content: center;
   justify-items: center;
+}
+
+li.skill-link,
+li.language-link {
+  color: #f5ffcf;
 }
