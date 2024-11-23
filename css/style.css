@@ -13,20 +13,27 @@ html {
 header {
   width: 100%;
   top: 0;
-
   object-fit: contain;
   height: 100%;
+  position: absolute;
+  /* opacity: inherit; */
+  top: -3%;
+  bottom: -5%;
+  z-index: 1;
 }
 
 body {
-  background-color: rgb(37, 64, 143);
+  /* background-color: rgb(37, 64, 143); */
+  background-color: black;
 }
 
 .main-nav {
   display: flex;
   flex-direction: row;
   gap: 1.5rem;
-  padding: 8%;
+  padding: 10%;
+  margin-left: auto;
+  justify-content: right;
 }
 
 .navigation {
@@ -142,7 +149,7 @@ p.event-tool {
 
 #name-text {
   position: absolute;
-  top: 30px;
+  top: 84px;
   left: 16px;
 
   color: #f0e6cb;
@@ -267,7 +274,8 @@ span.close {
   }
 
   .main-nav {
-    padding: 3%;
+    padding: 5%;
+    font-size: 1.5rem;
   }
 }
 .figma-details {
@@ -378,7 +386,7 @@ span.close {
   .navigation {
     list-style: none;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
   .language-link,
   .skill-link {
@@ -473,7 +481,8 @@ span.text_color {
 
 .about-me-heading {
   font-size: 3rem;
-  color: #20f7f0;
+  /* color: #20f7f0; */
+  color: rgb(117, 96, 165);
 }
 
 .contact-heading,
@@ -481,7 +490,8 @@ span.text_color {
 .skills-head {
   font-size: 2rem;
   margin-top: 0.5em;
-  color: #20f7f0;
+  /* color: #20f7f0; */
+  color: rgb(117, 96, 165);
   margin-bottom: 0.5rem;
 }
 
@@ -526,7 +536,6 @@ span.text_color {
   .skills-head {
     font-size: 3rem;
     margin-top: 0.5em;
-    color: #20f7f0;
   }
   .about-me-heading {
     font-size: 5rem;
