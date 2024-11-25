@@ -587,3 +587,13 @@ li.skill-link,
 li.language-link {
   color: #f5ffcf;
 }
+
+.personal-branding-img {
+  width: 100%;
+}
+
+.personal-branding {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
