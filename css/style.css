@@ -591,9 +591,3 @@ li.language-link {
 .personal-branding-img {
   width: 100%;
 }
-
-/* .personalbranding {
-  display: grid;
-
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-} */
