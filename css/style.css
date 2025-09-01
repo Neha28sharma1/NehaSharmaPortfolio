@@ -310,22 +310,20 @@ span.close {
     gap: 2rem;
   }
 
-  /* .single_event {
-    width: 80vw;
-   
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  } */
-
   @media (min-width: 1050px) {
     .single_event {
       width: 80vw;
       max-width: 1400px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      grid-template-columns: repeat(2, 1fr);
       gap: 20px;
     }
+  }
+
+  .single_event > * {
+    position: relative;
+    z-index: 1; /* ensures cards are on top */
   }
   #image-row {
     position: absolute;
