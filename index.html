@@ -22,7 +22,23 @@
     <link rel="stylesheet" href="css/style.css" />
     <script src="javascript/main.js" defer></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+
+    <script src="javascript/particles.js" defer></script>
+
     <title>Neha's Portfolio</title>
+    <style>
+      body {
+        margin: 0;
+        overflow-x: hidden;
+      }
+      canvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1; /* makes canvas background */
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -41,65 +57,20 @@
     <main>
       <section class="main-header">
         <div id="main-header">
-          <div class="background">
-            <img
-              src="pictures/background-port.png"
-              alt="Background-Image"
-              class="background-image"
-            />
-          </div>
           <div id="name-text">
             <h1 id="my-name">Hi, I'm Neha</h1>
-
             <h2 id="changing-text"></h2>
           </div>
-          <div id="image-row"></div>
+          <!-- <div id="image-row"></div> -->
         </div>
       </section>
-
       <section id="projects" class="event-container">
         <div class="single_event">
-          <div class="card-cont">
-            <figure class="main-image">
-              <a href="lunarlander.html" class="main-image"
-                ><img
-                  class="similar-image"
-                  src="pictures/lunar-lander-head.gif"
-                  alt="Lunar lander"
-                  style="width: 102%; height: 100%"
-              /></a>
-
-              <span class="event-text">
-                <figcaption class="product-name product-caption">
-                  Lunar Lander Game
-                </figcaption>
-                <p class="event-tool">Javascript</p>
-              </span>
-            </figure>
-          </div>
-
-          <div class="card-cont">
-            <figure>
-              <a href="antidote.html"
-                ><img
-                  class="similar-image"
-                  src="pictures/antidote-game.gif"
-                  alt="antidote game"
-              /></a>
-
-              <span class="event-text">
-                <figcaption class="product-name product-caption">
-                  Antidote Game
-                </figcaption>
-                <p class="event-tool">Javascript</p></span
-              >
-            </figure>
-          </div>
           <div class="card-cont">
             <figure>
               <a href="onlywomen.html"
                 ><img
-                  src="pictures/only-women.gif"
+                  src="pictures/only-women-wireframes.png"
                   alt="only-women-gif"
                   style="width: 102%; height: 100%"
                   class="similar-image"
@@ -109,7 +80,7 @@
                 <figcaption class="product-name product-caption">
                   E-commerce Website
                 </figcaption>
-                <p class="event-tool">Javascript/HTML/CSS/UX&UI</p>
+                <p class="event-tool">Frontend Development/UX&UI</p>
               </span>
             </figure>
           </div>
@@ -118,8 +89,9 @@
               <a href="foodferry.html"
                 ><img
                   class="similar-image"
-                  src="pictures/food-calling.gif"
+                  src="pictures/food-ferry-main1.png"
                   alt="Food Ferry"
+                  style="width: 100%"
               /></a>
 
               <span class="event-text">
@@ -127,6 +99,132 @@
                   Food Ordering App
                 </figcaption>
                 <p class="event-tool">UX & UI/Research</p></span
+              >
+            </figure>
+          </div>
+          <div class="card-cont">
+            <figure>
+              <a href="magazinecover.html"
+                ><img
+                  class="similar-image"
+                  src="pictures/magazine-main1.png"
+                  alt="magazine-cover"
+                  style="width: 95%"
+              /></a>
+
+              <span class="event-text">
+                <figcaption class="product-name product-caption">
+                  Glam Fashion Magazine
+                </figcaption>
+                <p class="event-tool">Branding/Content Creation</p></span
+              >
+            </figure>
+          </div>
+          <div class="card-cont">
+            <figure>
+              <a href="flash.html"
+                ><img
+                  class="similar-image"
+                  src="pictures/flash-metrics-trial-3.png"
+                  alt="Pop-up Art Gallery"
+                  style="width: 100%; height: 150%"
+              /></a>
+
+              <span class="event-text">
+                <figcaption class="product-name product-caption">
+                  Flash Pop-up Art Gallery
+                </figcaption>
+                <p class="event-tool">Branding/Content Creation</p></span
+              >
+            </figure>
+          </div>
+          <div class="card-cont">
+            <figure>
+              <a href="poster.html"
+                ><img
+                  class="similar-image"
+                  src="pictures/poster-main.png"
+                  alt="poster"
+              /></a>
+
+              <span class="event-text">
+                <figcaption class="product-name product-caption">
+                  Iconic Furniture
+                </figcaption>
+                <p class="event-tool">Graphic Design</p></span
+              >
+            </figure>
+          </div>
+
+          <div class="card-cont">
+            <figure>
+              <a href="personalbranding.html"
+                ><img
+                  class="similar-image"
+                  src="pictures/personal-brandingmain.png"
+                  alt="personal-branding"
+              /></a>
+
+              <span class="event-text">
+                <figcaption class="product-name product-caption">
+                  Personal Branding
+                </figcaption>
+                <p class="event-tool">Branding/Content Creation</p></span
+              >
+            </figure>
+          </div>
+
+          <div class="card-cont">
+            <figure>
+              <a href="fitnessapp.html"
+                ><img
+                  class="similar-image"
+                  src="pictures/flexifit-main.png"
+                  alt="Fitness-app"
+              /></a>
+
+              <span class="event-text">
+                <figcaption class="product-name product-caption">
+                  FlexiFit
+                </figcaption>
+                <p class="event-tool">Branding/Content Creation</p></span
+              >
+            </figure>
+          </div>
+
+          <div class="card-cont">
+            <figure class="main-image">
+              <a href="lunarlander.html" class="main-image"
+                ><img
+                  class="similar-image"
+                  src="pictures/lunar-lander-new.png"
+                  alt="Lunar lander"
+                  style="width: 102%; height: 100%"
+              /></a>
+
+              <span class="event-text">
+                <figcaption class="product-name product-caption">
+                  Lunar Lander Game
+                </figcaption>
+                <p class="event-tool">Frontend Development</p>
+              </span>
+            </figure>
+          </div>
+
+          <div class="card-cont">
+            <figure>
+              <a href="antidote.html"
+                ><img
+                  class="similar-image"
+                  src="pictures/antidote-new.png"
+                  alt="antidote game"
+              /></a>
+
+              <span class="event-text">
+                <figcaption class="product-name product-caption">
+                  Antidote Game
+                </figcaption>
+                <p class="event-tool">Frontend Development</p></span
               >
             </figure>
           </div>
@@ -143,82 +241,7 @@
                 <figcaption class="product-name product-caption">
                   Meet ups Website
                 </figcaption>
-                <p class="event-tool">
-                  Javascript/HTML/CSS/Node.js/Express.js
-                </p></span
-              >
-            </figure>
-          </div>
-          <div class="card-cont">
-            <figure>
-              <a href="personalbranding.html"
-                ><img
-                  class="similar-image"
-                  src="pictures/pixelforgelogo.gif"
-                  alt="personal-branding"
-              /></a>
-
-              <span class="event-text">
-                <figcaption class="product-name product-caption">
-                  Personal Branding
-                </figcaption>
-                <p class="event-tool">
-                  Illustrator/Photoshop/After Effects
-                </p></span
-              >
-            </figure>
-          </div>
-
-          <div class="card-cont">
-            <figure>
-              <a href="magazinecover.html"
-                ><img
-                  class="similar-image"
-                  src="pictures/magazine-main.png"
-                  alt="magazine-cover"
-              /></a>
-
-              <span class="event-text">
-                <figcaption class="product-name product-caption">
-                  Glam Fashion Magazine
-                </figcaption>
-                <p class="event-tool">Illustrator/Photoshop</p></span
-              >
-            </figure>
-          </div>
-          <div class="card-cont">
-            <figure>
-              <a href="fitnessapp.html"
-                ><img
-                  class="similar-image"
-                  src="pictures/flexifitapp.png"
-                  alt="Fitness-app"
-              /></a>
-
-              <span class="event-text">
-                <figcaption class="product-name product-caption">
-                  FlexiFit
-                </figcaption>
-                <p class="event-tool">
-                  Illustrator/Photoshop/After Effects
-                </p></span
-              >
-            </figure>
-          </div>
-          <div class="card-cont">
-            <figure>
-              <a href="poster.html"
-                ><img
-                  class="similar-image"
-                  src="pictures/poster-cover.png"
-                  alt="poster"
-              /></a>
-
-              <span class="event-text">
-                <figcaption class="product-name product-caption">
-                  Iconic Furniture
-                </figcaption>
-                <p class="event-tool">Illustrator/Photoshop</p></span
+                <p class="event-tool">Frontend Development</p></span
               >
             </figure>
           </div>
@@ -230,31 +253,16 @@
           <div>
             <div class="about-me-text">
               <p>
-                I’m Neha Sharma, a web development enthusiast based in
-                Gothenburg, currently pursuing a Bachelor of Science in Graphic
-                Design and Web Development. My studies focus on crafting
-                <strong>responsive</strong> and
-                <strong>user-friendly digital experiences</strong>, with
-                expertise in <strong>UX design</strong>, and
-                <strong>digital marketing</strong>.
-              </p>
-
-              <p>
-                With over seven years of experience in
-                <strong>multilingual customer support</strong> across telecom,
-                international law, and e-commerce, I’ve developed strong skills
-                in <strong>customer interaction management</strong> and
-                <strong>workflow optimization</strong>. I am proficient in using
-                tools like <strong>Zendesk</strong>, <strong>ERP</strong>, and
-                <strong>CRM systems</strong> to enhance efficiency and
-                communication.
-              </p>
-
-              <p>
-                I am passionate about building <strong>functional</strong> and
-                <strong>visually appealing websites</strong> and am eager to
-                apply my technical skills and creativity in an internship to
-                further develop my web development expertise.
+                I’m Neha Sharma, a Graphic Designer, a UX Designer and a Web
+                developer based in Gothenburg, currently pursuing a B.Sc. in
+                Graphic Design and Web Development at Jönköping University. I
+                specialize in creating user-centered digital experiences that
+                balance creativity with functionality—blending design,
+                storytelling, and code. With strong skills in Adobe Creative
+                Suite, Figma, and modern web technologies like React, Next.js,
+                and Tailwind CSS, I design and build everything from brand
+                identities and campaign assets to responsive websites and
+                interactive prototypes.
               </p>
             </div>
             <div class="contact" id="contact">
@@ -279,7 +287,10 @@
           <h1 class="skills-head">Skills</h1>
           <li class="skill-link">Html & CSS</li>
           <li class="skill-link">Javascript</li>
+          <li class="skill-link">Java</li>
           <li class="skill-link">Node.js (Express.js)</li>
+          <li class="skill-link">React</li>
+          <li class="skill-link">Tailwind CSS</li>
           <li class="skill-link">Figma</li>
           <li class="skill-link">Adobe Photoshop</li>
           <li class="skill-link">Adobe Illustrator</li>
@@ -293,9 +304,11 @@
 
         <div class="languages">
           <h2 class="lang-head">Languages</h2>
-          <li class="language-link">English</li>
-          <li class="language-link">Swedish (SAS 2)</li>
-          <li class="language-link">German (B2 level)</li>
+          <ul>
+            <li class="language-link">English – Native / Fluent</li>
+            <li class="language-link">Swedish – Fluent</li>
+            <li class="language-link">German – B2 / Working Proficiency</li>
+          </ul>
         </div>
       </section>
     </main>
