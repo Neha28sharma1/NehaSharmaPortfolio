@@ -33,16 +33,13 @@ function draw() {
   let centerX = width / 2;
   let centerY = height / 2;
 
-  // Rotate globe
-  rotationAngle += 0.002; // slow rotation
+  rotationAngle += 0.002;
 
-  // Draw globe particles
   for (let p of globeParticles) {
     let x3 = globeRadius * cos(p.phi) * cos(p.theta + rotationAngle);
     let y3 = globeRadius * sin(p.phi);
     let z3 = globeRadius * cos(p.phi) * sin(p.theta + rotationAngle);
 
-    // Perspective projection
     let perspective = 500 / (500 + z3);
     let x2 = centerX + x3 * perspective;
     let y2 = centerY + y3 * perspective;
@@ -52,7 +49,6 @@ function draw() {
     ellipse(x2, y2, 6 * perspective);
   }
 
-  // Floating background particles
   if (frameCount % 3 === 0) {
     floatingParticles.push({
       x: random(width),
@@ -81,7 +77,6 @@ function draw() {
   }
 }
 
-// Mouse move spawns floating particles
 function mouseMoved() {
   for (let i = 0; i < 5; i++) {
     floatingParticles.push({
@@ -96,7 +91,6 @@ function mouseMoved() {
   }
 }
 
-// Extra burst on click
 function mousePressed() {
   for (let i = 0; i < 150; i++) {
     floatingParticles.push({
