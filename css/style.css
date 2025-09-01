@@ -310,11 +310,22 @@ span.close {
     gap: 2rem;
   }
 
-  .single_event {
+  /* .single_event {
     width: 80vw;
-    /* max-width: 100%; */
+   
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  } */
+
+  @media (min-width: 1050px) {
+    .single_event {
+      width: 80vw;
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 20px;
+    }
   }
   #image-row {
     position: absolute;
